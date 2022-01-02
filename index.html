@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color:#f46a02;
+}
+.center,div{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+padding-top :20px;
+  width: 20%;
+}
+</style>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<img src="https://cdn.yellowmessenger.com/jjLaPGQZdhr21640974806593.gif" alt="Computer man" class="center" style="width:500px;height:500px;">
+
+
+<!-- <div> <p><button onclick="myFunction1()" class="w3-button w3-light-grey">Registration</button></div> -->
+
+
+ <!-- &nbsp&nbsp&nbsp<div> -->
+ <!-- // <p><button onclick="myFunction2()"  class="w3-button w3-light-grey">User Login </button></div> -->
+</body>
+</html>
+
+
+<script>
+function myFunction1() {
+ window.parent.postMessage(JSON.stringify({
+                                event_code: 'ym-client-event', data: {
+                                    event: {
+                                        code: "register",
+                                        data:"register",
+                 
+                                        medium:"message"
+                                    }
+                                }
+                            }), '*');
+}
+
+function myFunction2() {
+ window.parent.postMessage(JSON.stringify({
+                                event_code: 'ym-client-event', data: {
+                                    event: {
+                                        code: "login",
+                                        data: "login",
+                                        
+                                        medium:"message"
+                                    }
+                                }
+                            }), '*');
+}
+</script>
